@@ -1,2 +1,54 @@
-<font size="4" color="green">Kolo</font><font size="5"  color="maroon">rowy</font>
-<font size="7" color="navy">Te</font><font color="red">k</font><font size="7" color="fuchsia">st</font>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <style>
+      #blok {
+        position:relative;
+        width:500px;
+        height:2.2em;
+        line-height:2.2em;
+        margin:0 auto;
+        border:3px solid #DDD;
+        font-size:1.5em;
+        background-color:#EEE;
+        overflow:hidden;
+      }
+
+      #blok > p {
+        position:absolute;
+        margin:0;
+        white-space:nowrap;
+        animation:przesun 30s linear infinite;
+        -webkit-animation:przesun 30s linear infinite;
+      }
+
+      #blok > p:hover {
+        animation-play-state:paused;
+        -webkit-animation-play-state:paused;
+      }
+      
+      
+      @keyframes przesun
+      {
+        0% { transform:translateX(0); padding-left:110%; }
+        100% { transform:translateX(-100%); padding-left:110%; }
+      }
+
+      @-webkit-keyframes przesun
+      {
+        0% { -webkit-transform:translateX(0); padding-left:110%; }
+        100% { -webkit-transform:translateX(-100%); padding-left:110%; }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="blok">
+      <p><font size="6" color="green">Kolo</font><font size="7"  color="maroon">rowy</font>
+<font size="8" color="navy">Te</font><font color="red">k</font><font size="8" color="fuchsia">st</font></p>
+    </div>
+
+  </body>
+</html>
